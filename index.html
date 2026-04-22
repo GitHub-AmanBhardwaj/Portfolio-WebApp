@@ -483,6 +483,7 @@
             color: var(--accent-blue);
             gap: 12px;
         }
+
         .scroll-indicator {
             position: absolute;
             bottom: 60px;
@@ -503,10 +504,24 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
-            40% { transform: translate(-50%, -10px); }
-            60% { transform: translate(-50%, -5px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translate(-50%, 0);
+            }
+
+            40% {
+                transform: translate(-50%, -10px);
+            }
+
+            60% {
+                transform: translate(-50%, -5px);
+            }
         }
+
         @media (max-width: 1000px) {
             nav {
                 padding: 20px 5%;
@@ -536,7 +551,7 @@
             }
 
             .hero-content p {
-                margin: 20px auto 0; 
+                margin: 20px auto 0;
                 max-width: 400px;
                 font-size: 90%;
             }
@@ -573,7 +588,8 @@
 <body>
 
     <nav>
-        <a href="/"><span class="material-symbols-outlined" style="font-size:32px; vertical-align: middle;">brand_family</span></a>
+        <a href="/"><span class="material-symbols-outlined"
+                style="font-size:32px; vertical-align: middle;">brand_family</span></a>
         <div class="nav-center">
             <a href="#projects">projects</a>
             <a href="#academic">Academics</a>
@@ -585,22 +601,23 @@
     <header class="hero">
         <div class="hero-content">
             <h1>AmAn<br>bHaRdWaj</h1>
-            <p>Developing scalable intelligent systems with a focus on Large Language Models and Neural Network Architectures.</p>
+            <p>Developing scalable intelligent systems with a focus on Large Language Models and Neural Network
+                Architectures.</p>
         </div>
         <div class="hero-visual">
             <div class="hidden-img"></div>
             <canvas id="revealCanvas"></canvas>
         </div>
-        
-        <a href="#skills" class="scroll-indicator">     
+
+        <a href="#skills" class="scroll-indicator">
             <div style="display: flex; flex-direction: column; align-items: center;">
-            <span style="font-family: 'Major Mono Display', monospace; font-size: 12px;">
-                click HeRe
-            </span>
-            <span class="material-symbols-outlined" style="font-size: 24px;">
-                arrow_downward
-            </span>
-            </div>        
+                <span style="font-family: 'Major Mono Display', monospace; font-size: 12px;">
+                    click HeRe
+                </span>
+                <span class="material-symbols-outlined" style="font-size: 24px;">
+                    arrow_downward
+                </span>
+            </div>
         </a>
     </header>
 
@@ -749,8 +766,54 @@
         </div>
     </section>
 
+    <section class="section" id="live-projects">
+        <h2 class="section-header">04 <span>/ LIVE PROJECTS</span></h2>
+
+        <div class="bento-grid">
+
+            <!-- TrueLies -->
+            <a href="https://whyamanbhardwaj-truelies.hf.space/" target="_blank" class="bento-card span-8">
+                <h3>TrueLies</h3>
+                <p>
+                    Deep learning system that detects deception using both video (facial expressions) and text
+                    (transcripts).
+                    Uses DistilBERT + Vision Transformer + LSTM with cross-attention fusion.
+                    Achieves ~80% validation accuracy on real-world courtroom dataset.
+                </p>
+            </a>
+
+            <!-- Image Resizer -->
+            <a href="https://whyamanbhardwaj-imageresizzer.hf.space/" target="_blank" class="bento-card span-4">
+                <h3>Image Resizer Tool</h3>
+                <p>
+                    Web app that helps resize images using OpenCV with simple and easy to use UI.
+                </p>
+            </a>
+
+            <!-- Clippio -->
+            <a href="https://clippo.vercel.app/" target="_blank" class="bento-card span-4">
+                <h3>ClippiO</h3>
+                <p>
+                    Fast and minimal tool to download Instagram reels directly via URL.
+                    Focused on simplicity, speed, and clean UI.
+                </p>
+            </a>
+
+
+            <!-- Neural Network Visualizer -->
+            <a href="https://whyamanbhardwaj-neuralnetworkvisualizer.hf.space/" target="_blank"
+                class="bento-card span-8">
+                <h3>Neural Network Visualizer</h3>
+                <p>
+                    Interactive tool to visualize neural decision boundaries on datasets like moons, blobs, XOR.
+                    Built with Flask + sklearn to demonstrate model behavior in real time.
+                </p>
+            </a>
+        </div>
+    </section>
+
     <section class="section" id="leadership">
-        <h2 class="section-header">04 <span>/ ACADEMIC SERVICE & LEADERSHIP</span></h2>
+        <h2 class="section-header">05 <span>/ ACADEMIC SERVICE & LEADERSHIP</span></h2>
         <div class="leadership-list">
             <div class="leader-item">
                 <h4>Board of Studies Coordinator</h4>
@@ -762,7 +825,8 @@
             </div>
             <div class="leader-item">
                 <h4>Academic Research</h4>
-                <p>Active collaboration with faculty on manuscript preparation and experimentation for research papers.</p>
+                <p>Active collaboration with faculty on manuscript preparation and experimentation for research papers.
+                </p>
             </div>
             <div class="leader-item">
                 <h4>Institutional Compliance</h4>
@@ -772,7 +836,7 @@
     </section>
 
     <section class="section" id="certificates">
-        <h2 class="section-header">05 <span>/ PROFESSIONAL CERTIFICATES</span></h2>
+        <h2 class="section-header">06 <span>/ PROFESSIONAL CERTIFICATES</span></h2>
 
         <div class="bento-grid">
 
@@ -1018,5 +1082,3 @@
 </body>
 
 </html>
-
-
