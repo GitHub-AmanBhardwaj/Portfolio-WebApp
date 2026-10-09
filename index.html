@@ -312,17 +312,14 @@
 
         footer {
             position: relative;
-            padding: 100px 5% 60px;
+            padding: 20px 5% 15px;
             overflow: hidden;
             border-top: 1px solid var(--border);
-            background: #020202;
+            background: #000;
         }
 
-        footer {
-            position: relative;
-            padding: 80px 5% 40px;
-            overflow: hidden;
-            background: #000;
+        #certificates {
+            padding-bottom: 40px;
         }
 
         .footer-waves {
@@ -331,21 +328,90 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 10% 100%, var(--accent-blue), transparent 40%),
-                radial-gradient(circle at 50% 110%, var(--accent-purple), transparent 40%),
-                radial-gradient(circle at 90% 100%, var(--accent-pink), transparent 60%);
+            background: radial-gradient(circle at 10% 80%, var(--accent-blue), transparent 45%),
+                radial-gradient(circle at 50% 60%, var(--accent-purple), transparent 50%),
+                radial-gradient(circle at 90% 60%, var(--accent-pink), transparent 50%);
             opacity: 0.3;
-            filter: blur(80px);
+            filter: blur(100px);
             z-index: 1;
             pointer-events: none;
+        }
+
+        .footer-main {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .footer-bloom {
+            width: 480px;
+            height: 460px;
+            max-width: 45vw;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 160px;
+            background: rgba(255, 255, 255, 0.455);
+            flex-shrink: 0;
         }
 
         .footer-content {
             position: relative;
             z-index: 10;
+            flex: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 50px;
+        }
+
+        .footer-copyright {
+            margin-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+            opacity: 0.3;
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            text-align: right;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 900px) {
+            .footer-main {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .footer-bloom {
+                width: 100%;
+                max-width: 380px;
+                height: 380px;
+                margin: 0 auto;
+            }
+
+            .footer-divider {
+                display: none;
+            }
+
+            .footer-content {
+                width: 100%;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                padding-top: 0;
+            }
+
+            .footer-copyright {
+                margin-top: 35px;
+                margin-bottom: 10px;
+                justify-content: flex-start;
+                text-align: left;
+            }
         }
 
         .footer-col h5 {
@@ -1424,75 +1490,73 @@
     </section>
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <footer>
         <div class="footer-waves"></div>
 
-        <div class="footer-content">
-            <div class="footer-col">
-                <h5>LOCATION / ADDRESS</h5>
-                <p style="color: var(--text-dim); font-size: 0.85rem;">
-                    Gwalior,<br> Madhya Pradesh, India
-                </p>
+        <div class="footer-main">
+            <div id="bloom-container" class="footer-bloom" data-url="https://linkedin.com/in/whyamanbhardwaj"
+                data-flower="lily" data-palette="azure" data-bloom-text="click to bloom"
+                data-gather-text="scan to connect">
             </div>
 
-            <div class="footer-col">
-                <h5>PROFESSIONAL PROFILES</h5>
-                <ul class="footer-links">
-                    <li>
-                        <a href="https://github.com/GitHub-AmanBhardwaj" target="_blank">
-                            <i class="fab fa-github fa-fw"></i> GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://leetcode.com/whyamanbhardwaj" target="_blank">
-                            <i class="fas fa-code fa-fw"></i> LeetCode
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://huggingface.co/whyamanbhardwaj" target="_blank">
-                            <i class="fas fa-brain fa-fw"></i> Hugging Face
-                        </a>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="footer-col">
-                <h5>SOCIAL & CONTACT</h5>
-                <ul class="footer-links">
-                    <li>
-                        <a href="https://linkedin.com/in/whyamanbhardwaj" target="_blank">
-                            <i class="fab fa-linkedin fa-fw"></i> LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/whyamanbhardwaj" target="_blank">
-                            <i class="fab fa-instagram fa-fw"></i> Instagram
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://x.com/whyamanbhardwaj" target="_blank">
-                            <i class="fab fa-twitter fa-fw"></i> X (Twitter)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:whyamanbhardwaj@gmail.com">
-                            <i class="fas fa-envelope fa-fw"></i> Email
-                        </a>
-                    </li>
-                </ul>
+            <div class="footer-divider"></div>
+
+            <div class="footer-content">
+
+                <div class="footer-col">
+                    <h5>SOCIAL & CONTACT</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://linkedin.com/in/whyamanbhardwaj" target="_blank">
+                                <i class="fab fa-linkedin fa-fw"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/whyamanbhardwaj" target="_blank">
+                                <i class="fab fa-instagram fa-fw"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/whyamanbhardwaj" target="_blank">
+                                <i class="fab fa-twitter fa-fw"></i> X (Twitter)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:whyamanbhardwaj@gmail.com">
+                                <i class="fas fa-envelope fa-fw"></i> Email
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>PROFESSIONAL PROFILES</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://github.com/GitHub-AmanBhardwaj" target="_blank">
+                                <i class="fab fa-github fa-fw"></i> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://leetcode.com/whyamanbhardwaj" target="_blank">
+                                <i class="fas fa-code fa-fw"></i> LeetCode
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://huggingface.co/whyamanbhardwaj" target="_blank">
+                                <i class="fas fa-brain fa-fw"></i> Hugging Face
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
 
-        <div style="margin-top: 80px; opacity: 0.3; font-size: 0.65rem; letter-spacing: 1.5px;">
+        <div class="footer-copyright">
             © 2026 Aman Bhardwaj. All rights reserved.
         </div>
-    </footer>
-
     </footer>
 
     <script>
@@ -1563,6 +1627,7 @@
             observer.observe(section);
         });
     </script>
+    <script src="bloom-bundle.js"></script>
 </body>
 
 </html>
